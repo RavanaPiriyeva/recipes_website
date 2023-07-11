@@ -1,33 +1,22 @@
 const express = require('express');
 const cors = require("cors");
 
-// const { countryRoutes } = require('./routes/countryRoutes');
-// const { writerRoutes } = require('./routes/writerRoutes');
-// const { bookRoutes } = require('./routes/bookRoutes');
-// const fileUpload = require('express-fileupload');
-// const fs = require('fs');
+ const { categoryRoutes } = require('./routes/categoryRoute');
+ const { UserRoutes } = require('./routes/userRoute');
 
 const { db } = require('./config/db');
 const app = express();
 require('dotenv').config()
 
 db.connect();
-// app.use((req, res, next) => {
-//     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3001');
-//     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-//     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-//     next();
-//   });
+
 app.use(express.json())
 app.use(cors());
 
-// app.use(fileUpload());
 
 
-// app.use('/api/country', countryRoutes)
-
-// app.use('/api/writer', writerRoutes)
-// app.use('/api/book', bookRoutes)
+app.use('/api/category', categoryRoutes)
+app.use('/api/user', UserRoutes)
 
 
 app.listen(3000,()=>{
