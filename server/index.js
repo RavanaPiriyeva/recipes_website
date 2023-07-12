@@ -1,8 +1,10 @@
 const express = require('express');
 const cors = require("cors");
 
- const { categoryRoutes } = require('./routes/categoryRoute');
- const { UserRoutes } = require('./routes/userRoute');
+const { categoryRoutes } = require('./routes/categoryRoute');
+const { UserRoutes } = require('./routes/userRoute');
+const { recipeRoutes } = require('./routes/recipeRoute');
+
 
 const { db } = require('./config/db');
 const app = express();
@@ -17,6 +19,8 @@ app.use(cors());
 
 app.use('/api/category', categoryRoutes)
 app.use('/api/user', UserRoutes)
+app.use('/api/recipe', recipeRoutes)
+
 
 
 app.listen(3000,()=>{
