@@ -4,6 +4,8 @@ const cors = require("cors");
 const { categoryRoutes } = require('./routes/categoryRoute');
 const { UserRoutes } = require('./routes/userRoute');
 const { recipeRoutes } = require('./routes/recipeRoute');
+const { tagRoute } = require('./routes/tagRoute')
+const { rateRoutes } = require('./routes/rateRoute')
 
 
 const { db } = require('./config/db');
@@ -20,6 +22,8 @@ app.use(cors());
 app.use('/api/category', categoryRoutes)
 app.use('/api/user', UserRoutes)
 app.use('/api/recipe', recipeRoutes)
+app.use('/api/tag',tagRoute)
+app.use('/api/rate',rateRoutes)
 
 
 
