@@ -8,5 +8,6 @@ const IngredientSchema = mongoose.Schema({
 const Ingredient = mongoose.model('Ingredient', IngredientSchema)
 
 module.exports = {
+    IngredientSchema,
     Ingredient
 }
