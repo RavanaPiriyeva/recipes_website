@@ -1,0 +1,12 @@
+.about {
+  padding: 20px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about .logo_part {
+  font-size: 25px;
+}
+.about .logo_part span {
+  color: orange;
+}/*# sourceMappingURL=about.css.map */

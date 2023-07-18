@@ -1,0 +1,24 @@
+.main_divs {
+  padding: 0 50px;
+  display: flex;
+}
+.main_divs .desc_part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main_divs .desc_part h1 {
+  font-size: 4rem;
+  letter-spacing: 2px;
+}
+.main_divs .desc_part h1 span {
+  color: orange;
+}
+.main_divs .desc_part p {
+  font-size: 20px;
+  color: grey;
+}
+.main_divs .pizza {
+  height: 600px;
+}/*# sourceMappingURL=main.css.map */

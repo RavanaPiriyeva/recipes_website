@@ -1,9 +1,14 @@
 import React from 'react'
+
+import Main from '../components/Main';
 import Navbar from '../components/Navbar'
+import "../style/layout/home.scss";
 
 const Home = () => {
   return (
-    <div><Navbar/></div>
+    <div className='body'>
+      <Main/>
+    </div>
   )
 }
 

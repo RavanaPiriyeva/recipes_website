@@ -1,0 +1,43 @@
+.navbar {
+  padding: 0 50px;
+  height: 80px;
+  background-color: rgba(243, 247, 252, 0.83);
+  align-items: center;
+  display: flex;
+  align-items: center;
+}
+.navbar .flex-div {
+  justify-content: space-between;
+  width: 100%;
+}
+.navbar .flex-div .logo {
+  display: flex;
+  align-items: center;
+}
+.navbar .flex-div .logo a {
+  font-size: 20px;
+  color: orange;
+  font-weight: 700;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.navbar .flex-div ul {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.navbar .flex-div ul li {
+  margin-right: 30px;
+}
+.navbar .flex-div ul li a {
+  color: grey;
+  font-size: 18px;
+}
+.navbar .flex-div .login {
+  padding: 10px;
+  border: 1px solid orange;
+  border-radius: 30px;
+}
+.navbar .flex-div .login a {
+  font-size: 20px;
+  color: grey;
+}/*# sourceMappingURL=navbar.css.map */
