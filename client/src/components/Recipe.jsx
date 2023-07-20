@@ -1,7 +1,7 @@
 import React from "react";
 import pizza1 from "../images/pizza1.jpg";
 
-function Recipe() {
+function Recipe({item}) {
   return (
     <div>
       <div className="card">
@@ -13,15 +13,10 @@ function Recipe() {
         <div className="card-content">
           <div className="media">
             <div className="media-content">
-              <p className="title is-4">Pizza</p>
+              <p className="title is-4">{item.name}</p>
             </div>
           </div>
 
-          <div className="content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-            nec iaculis maurisipsum dolor sit amet, consectetur adipiscing elit.
-            Phasellus nec iaculis mauris.
-          </div>
         </div>
       </div>
     </div>

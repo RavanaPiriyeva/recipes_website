@@ -6,24 +6,33 @@ import axios from 'axios';
 
 function Categories() {
 
-  const[categories,setCategories] = useState([])
+  const [categories, setCategories] = useState([]);
 
-  useEffect(()=>{
-      const categ = axios.get("http://localhost:3000/api/category")
-                    .then(res=> console.log(res))
-                    .catch(err=> console.log(err,'hatam var'))
-  },
-  [])
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("http://localhost:3000/api/category");
+        console.log(response.data);
+        setCategories(response.data);
+      } catch (error) {
+        console.log(error, 'hatam var');
+      }
+    };
+
+    fetchData();
+  }, []);
 
   
 
   return (
     <div>
       <div className="columns">
-        <div className="column"><Recipe/></div>
-        <div className="column"><Recipe/></div>
-        <div className="column"><Recipe/></div>
-        <div className="column"><Recipe/></div>
+        {
+          categories.map ((item,index)=> {
+             return  <div className="column"><Recipe key={index} item={item}/></div>
+          })
+        }
+       
       </div>
     </div>
   );
