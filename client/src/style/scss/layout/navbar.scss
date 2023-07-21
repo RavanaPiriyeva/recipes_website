@@ -1,0 +1,50 @@
+.navbar {
+    padding: 0 50px;
+    height: 80px;
+    background-color: rgba(243, 247, 252, 0.83);
+    align-items: center;
+    display: flex;
+    align-items: center;
+    .flex-div {
+        justify-content: space-between;
+        width: 100%;
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            a{
+                font-size: 20px;
+                color: orange;
+                font-weight: 700;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                
+            }
+        }
+         
+
+        ul {
+            display: flex;
+            height: 100%;
+            align-items: center;
+            li {
+                margin-right: 30px;
+                a {
+                    color: grey;
+                    font-size: 18px;
+                }
+            }
+        }
+        .login {
+             padding: 10px;
+             border: 1px solid orange;
+             border-radius: 30px;
+            a{
+                font-size: 20px;
+                color: grey;
+            }
+        }
+    }
+
+}
+
+
